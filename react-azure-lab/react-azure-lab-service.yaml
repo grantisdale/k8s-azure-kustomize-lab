@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-azure-lab
+  labels:
+    app: react-azure-lab-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: react-azure-lab-service
+  template:
+    metadata:
+      labels:
+        app: react-azure-lab-service
+    spec:
+      containers:
+      - name: react-azure-lab-service
+        image: react-azure-lab-service
+        ports:
+        - containerPort: 80

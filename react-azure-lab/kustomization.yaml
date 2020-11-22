@@ -1,0 +1,7 @@
+resources:
+- react-azure-lab-service.yaml
+apiVersion: kustomize.config.k8s.io/v1/beta1
+kind: Kustomization
+images:
+- name: grantacrlab1.azurecr.io/react-azure-lab
+  newTag: 1.0.0
